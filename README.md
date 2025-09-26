@@ -22,6 +22,7 @@ A futtatáshoz Python 3.12 szükséges.
 Követelmények telepítése:
 ```bash
 pip install -r requirements.txt
+```
 
 Scriptek
 1. Betanító script (train.py)
