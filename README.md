@@ -1,6 +1,8 @@
 # YOLO Loader Project
 
-Ez a repository egy YOLO-alapú élkereső rendszerhez készült, amely a modell betanításától kezdve a tesztelésen át az eredmények kiértékeléséig és exportálásáig tartalmaz Python scripteket.
+  Ez a repository egy YOLO-alapú élkereső rendszerhez készült, amely a modell betanításától kezdve a tesztelésen át az eredmények kiértékeléséig és exportálásáig tartalmaz Python scripteket.
+  A logisztikai központban raktárrobotok, úgynevezett Loaderek, végzik a termékek ki és betárolását a raktárban. A pontos működéshez a robotok mozgását kamerás rendszerek segítik, melyeket hagyomásos, élkeresés alapú megoldással programozták. A Loaderek által generált összes hiba ~40%-a, három különböző, kamerás részfolyamathoz köthető. A hibákat súlyosbítja, hogy kamerás hiba esetén a folyamat során ütközés, vagy egyéb, a vezérlés által nem javítható hiba jelentkezik. Ilyenkor a berendezés leáll az üzemeltető technikus manuális hibajavításáig.
+  A fentiek miatt alakítottam ki a depp learning alapú YOLO object detection megoldást, ami egy nagyságrenddel nagyobb stabilitással végzi a feladatát.
 
 ## Tartalomjegyzék
 - [Telepítés](#telepítés)
