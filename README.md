@@ -22,3 +22,67 @@ A futtatáshoz Python 3.12 szükséges.
 Követelmények telepítése:
 ```bash
 pip install -r requirements.txt
+
+Scriptek
+1. Betanító script (train.py)
+Létrehozza a tanító és teszt adathalmazokat
+Betanítja a modellt
+Elmenti a betanított modellt
+2. Tesztelő script (test.py)
+
+A betanított modellen futtatja a teszt adathalmaz összes képét
+
+Predikciókat készít és statisztikákat gyűjt
+
+Az eredményeket .csv formátumban menti
+
+3. Eredménykiértékelő script (evaluate_results.py)
+
+A .csv fájlban tárolt eredményeket feldolgozza
+
+Az „érdekes” képeket külön mappába másolja további elemzéshez
+
+4. CSV feldolgozó script (process_csv.py)
+
+Létrehozza a results.csv fájlt az alábbi formátumban:
+
+fájlnév, x_tengely, y_tengely
+
+
+Működés:
+
+Képnevek kigyűjtése
+
+ATG és faceplate detekciók feldolgozása
+
+ATG esetén: alsó koordináták átlagolása
+
+Faceplate esetén: bal/jobb oldalfüggő koordináta választás
+
+Az eredményt results.csv fájlban menti
+
+5. Teszt-összehasonlító script (compare_results.py)
+
+Összehasonlítja a hagyományos loader élkereső és a YOLO által számolt tengelyeket
+
+Az eredményeket hisztogramon ábrázolja
+
+±15 pixeles eltérésű detekciókat külön DataFrame-ben tárolja (df_erdekesek)
+
+A kijelölt képekre vizualizáció kerül:
+
+zöld: névleges x és y tengely
+
+kék: YOLO által számolt tengelykereszt
+
+piros: hagyományos élkereső tengelykereszt
+
+Az 1226 tesztképből 46 lett kiemelve, az első 9 képből 3×3 mozaik készül
+
+6. Modell export script (export_model.py)
+
+A betanított modell exportálása további felhasználásra
+
+7. ONNX tesztelő script (onnx_test.py)
+
+Az exportált ONNX modell futtatása és ellenőrzése
