@@ -26,7 +26,7 @@ Követelmények telepítése:
 pip install -r requirements.txt
 ```
 
-Scriptek
+## Scriptek
 1. Betanító script (1-fiok_train.py)
 Létrehozza a tanító és teszt adathalmazokat, a könyvtárszerkezetet, betanítja a modellt.
 
