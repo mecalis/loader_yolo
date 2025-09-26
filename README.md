@@ -27,17 +27,11 @@ pip install -r requirements.txt
 ```
 
 Scriptek
-1. Betanító script (train.py)
-Létrehozza a tanító és teszt adathalmazokat
-Betanítja a modellt
-Elmenti a betanított modellt
-2. Tesztelő script (test.py)
+1. Betanító script (1-fiok_train.py)
+Létrehozza a tanító és teszt adathalmazokat, a könyvtárszerkezetet, betanítja a modellt.
 
-A betanított modellen futtatja a teszt adathalmaz összes képét
-
-Predikciókat készít és statisztikákat gyűjt
-
-Az eredményeket .csv formátumban menti
+2. Tesztelő script (2-fiok_teszt.py)
+A betanított modellen futtatja a teszt adathalmaz összes, 1200+ db képét. Predikciókat készít és statisztikákat gyűjt. Az eredményeket .csv formátumban menti.
 
 3. Eredménykiértékelő script (evaluate_results.py)
 
