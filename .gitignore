@@ -1,0 +1,8 @@
+.idea
+.venv
+_pycache_
+fiok_streamlit
+mlartifacts
+mlruns
+runs
+fiok_train2_nem_kell.py

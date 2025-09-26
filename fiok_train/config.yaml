@@ -1,0 +1,3 @@
+input_dir: "c:\\ML\\loader_yolo\\fiok_train\\"
+output_dir: "c:\\ML\\loader_yolo\\fiok_train\\"
+flip: "yes"

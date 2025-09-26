@@ -1,0 +1,6 @@
+train: c:\\ML\\loader_yolo_p12\\fiok_train\\train
+val: c:\\ML\\loader_yolo_p12\\fiok_train\\val
+
+nc: 2
+
+names: ["faceplate", "atg"]
