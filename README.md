@@ -3,6 +3,7 @@
   Ez a repository egy YOLO-alapú élkereső rendszerhez készült, amely a modell betanításától kezdve a tesztelésen át az eredmények kiértékeléséig és exportálásáig tartalmaz Python scripteket.
   A logisztikai központban raktárrobotok, úgynevezett Loaderek, végzik a termékek ki és betárolását a raktárban. A pontos működéshez a robotok mozgását kamerás rendszerek segítik, melyeket hagyomásos, élkeresés alapú megoldással programozták. A Loaderek által generált összes hiba ~40%-a, három különböző, kamerás részfolyamathoz köthető. A hibákat súlyosbítja, hogy kamerás hiba esetén a folyamat során ütközés, vagy egyéb, a vezérlés által nem javítható hiba jelentkezik. Ilyenkor a berendezés leáll az üzemeltető technikus manuális hibajavításáig.
   A fentiek miatt alakítottam ki a depp learning alapú YOLO object detection megoldást, ami egy nagyságrenddel nagyobb stabilitással végzi a feladatát.
+  A script gyakorlatban felhasználható kimenete egy eltolás vektor. A Loader mindig az adott polchely egy dedikált, névleges koordinátájánál áll meg, majd a kamerás feldolgozással korrigáljuk a beállás pontatlanságát.
 
 ## Tartalomjegyzék
 - [Telepítés](#telepítés)
@@ -33,17 +34,12 @@ Létrehozza a tanító és teszt adathalmazokat, a könyvtárszerkezetet, betan�
 2. Tesztelő script (2-fiok_teszt.py)
 A betanított modellen futtatja a teszt adathalmaz összes, 1200+ db képét. Predikciókat készít és statisztikákat gyűjt. Az eredményeket .csv formátumban menti.
 
-3. Eredménykiértékelő script (evaluate_results.py)
+3. Eredménykiértékelő script (3-fiok_csv_eredmenyek.py)
+A .csv fájlban tárolt eredményeket feldolgozza. Minden betanítás után futtatandó. Megvizsgálja a model pontosságát aszerint, hogy minden képen megtalálta-e a model az objektumokat.
+Az „érdekes” képeket külön mappába másolja további elemzéshez. 
 
-A .csv fájlban tárolt eredményeket feldolgozza
-
-Az „érdekes” képeket külön mappába másolja további elemzéshez
-
-4. CSV feldolgozó script (process_csv.py)
-
-Létrehozza a results.csv fájlt az alábbi formátumban:
-
-fájlnév, x_tengely, y_tengely
+4. CSV feldolgozó script (4-generate_text_file.py)
+Létrehozza a results.csv fájlt az alábbi formátumban: fájlnév, x_tengely, y_tengely
 
 
 Működés:
