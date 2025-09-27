@@ -4,13 +4,14 @@
   
   A logisztikai központban raktárrobotok, úgynevezett Loaderek, végzik a termékek ki és betárolását a raktárban. A pontos működéshez a robotok mozgását kamerás rendszerek segítik, melyeket hagyomásos, élkeresés alapú megoldással programozták. A Loaderek által generált összes hiba ~40%-a, három különböző, kamerás részfolyamathoz köthető. A hibákat súlyosbítja, hogy kamerás hiba esetén a folyamat során ütközés, vagy egyéb, a vezérlés által nem javítható hiba jelentkezik. Ilyenkor a berendezés leáll az üzemeltető technikus manuális hibajavításáig.
   
-  A fentiek miatt alakítottam ki a depp learning alapú YOLO object detection megoldást, ami egy nagyságrenddel nagyobb stabilitással végzi a feladatát.
+  A fentiek miatt alakítottam ki a depp learning alapú YOLO object detection megoldást, ami egy nagyságrenddel nagyobb stabilitással végzi a feladatát. A YOLO modell kifejezetten ellenálló a változó fényviszonyokkal és a becsillanásokkal szemben.
   
   A kamerás mérő folyamat során meg kell határozni a vízszintes tartóléc alsó élének és a nagy fióklemez oldalsó élének metszéspontjában lévő koordinátát, melynek a kép közepétől mért távolsága adja meg a robot korrekciós offset értékét.  
   Az alábbi képen mind a 3 koordináta rendszer ábrázolásra került:
   - a kép közepét jelző koordináta rendszer zöld színnel,
   - a meglévő kamerás script kimenete piros színnel,
   - az objektumkeresés eredményét felhasználva az új script által generált koordináta rendszer kék színnel.
+    ![Koordináta rendszerek](fiok_teszt/osszehasonlito_kepek/Frame_20250627_111958_244_LoaderFS1010FK_StorageHangerFaceplateStateDetect_Right.jpg)
 
 A Loader mindig az adott polchely egy dedikált, névleges koordinátájánál áll meg, majd a kamerás feldolgozással korrigáljuk a beállás pontatlanságát. A pontatlanság adódik egyrészt a négy keréken guruló eszköz beállási pontosságától, másrészt a helyenként különböző tömegekkel terhelt polcrendszer lehajlásától és vetemedésétől.
 
