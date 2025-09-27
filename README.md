@@ -15,7 +15,7 @@ A Loader mindig az adott polchely egy dedikált, névleges koordinátájánál �
 - [Telepítés](#telepítés)
 - [Használat](#használat)
 - [Scriptek](#scriptek)
-  - [1. Betanító script (`1-fiok_train.py`)]([#1-betanító-script-trainpy](https://github.com/mecalis/loader_yolo/blob/main/1-fiok_train.py))
+  - 1. Betanító script [1-fiok_train.py](https://github.com/mecalis/loader_yolo/blob/main/1-fiok_train.py)
   - [2. Tesztelő script (`2-fiok_teszt.py`)](#2-tesztelő-script-testpy)
   - [3. Eredménykiértékelő script (`3-fiok_csv_eredmenyek.py`)](#3-eredménykiértékelő-script-evaluate_resultspy)
   - [4. CSV feldolgozó script (`4-generate_text_file.py`)](#4-csv-feldolgozó-script-process_csvpy)
