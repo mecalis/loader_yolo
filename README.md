@@ -15,13 +15,13 @@ A Loader mindig az adott polchely egy dedikált, névleges koordinátájánál �
 - [Telepítés](#telepítés)
 - [Használat](#használat)
 - [Scriptek](#scriptek)
-  - [Betanító script - 1-fiok_train.py](https://github.com/mecalis/loader_yolo/blob/main/1-fiok_train.py)
-  - [Tesztelő script (`2-fiok_teszt.py`)](https://github.com/mecalis/loader_yolo/blob/main/2-fiok_teszt.py)
-  - [3. Eredménykiértékelő script (`3-fiok_csv_eredmenyek.py`)](#3-eredménykiértékelő-script-evaluate_resultspy)
-  - [4. CSV feldolgozó script (`4-generate_text_file.py`)](#4-csv-feldolgozó-script-process_csvpy)
-  - [5. Teszt-összehasonlító script (`5-fiok_teszt_eredmeny_osszehasonlito.py`)](#5-teszt-összehasonlító-script-compare_resultspy)
-  - [6. Modell export script (`6-fiok_model_export.py`)](#6-modell-export-script-export_modelpy)
-  - [7. ONNX tesztelő script (`7-onnx_teszt.py`)](#7-onnx-tesztelő-script-onnx_testpy)
+  - [Betanító script - (1-fiok_train.py)](https://github.com/mecalis/loader_yolo/blob/main/1-fiok_train.py)
+  - [Tesztelő script - (2-fiok_teszt.py)](https://github.com/mecalis/loader_yolo/blob/main/2-fiok_teszt.py)
+  - [Eredménykiértékelő script (3-fiok_csv_eredmenyek.py)](https://github.com/mecalis/loader_yolo/blob/main/3-fiok_csv_eredmenyek.py)
+  - [CSV feldolgozó script (4-generate_text_file.py)](https://github.com/mecalis/loader_yolo/blob/main/4-generate_text_file.py)
+  - [Teszt-összehasonlító script (5-fiok_teszt_eredmeny_osszehasonlito.py)](https://github.com/mecalis/loader_yolo/blob/main/5-fiok_teszt_eredmeny_osszehasonlito.py)
+  - [Modell export script (6-fiok_model_export.py)](https://github.com/mecalis/loader_yolo/blob/main/6-fiok_model_export.py)
+  - [ONNX tesztelő script (7-onnx_teszt.py)](https://github.com/mecalis/loader_yolo/blob/main/7-onnx_teszt.py)
 
 ---
 
