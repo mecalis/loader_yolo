@@ -3,13 +3,19 @@
   Ez a repository egy YOLO-alapú élkereső rendszerhez készült, amely a modell betanításától kezdve a tesztelésen át az eredmények kiértékeléséig és exportálásáig tartalmaz Python scripteket.
   A logisztikai központban raktárrobotok, úgynevezett Loaderek, végzik a termékek ki és betárolását a raktárban. A pontos működéshez a robotok mozgását kamerás rendszerek segítik, melyeket hagyomásos, élkeresés alapú megoldással programozták. A Loaderek által generált összes hiba ~40%-a, három különböző, kamerás részfolyamathoz köthető. A hibákat súlyosbítja, hogy kamerás hiba esetén a folyamat során ütközés, vagy egyéb, a vezérlés által nem javítható hiba jelentkezik. Ilyenkor a berendezés leáll az üzemeltető technikus manuális hibajavításáig.
   A fentiek miatt alakítottam ki a depp learning alapú YOLO object detection megoldást, ami egy nagyságrenddel nagyobb stabilitással végzi a feladatát.
-  A script gyakorlatban felhasználható kimenete egy eltolás vektor. A Loader mindig az adott polchely egy dedikált, névleges koordinátájánál áll meg, majd a kamerás feldolgozással korrigáljuk a beállás pontatlanságát.
+  A kamerás mérő folyamat során meg kell határozni a vízszintes tartóléc alsó élének és a nagy fióklemez oldalsó élének metszéspontjában lévő koordinátát, melynek a kép közepétől mért távolsága adja meg a robot korrekciós offset értékét.
+  Az alábbi képen mind a 3 koordináta rendszer ábrázolásra került:
+  - a kép közepét jelző koordináta rendszer zöld színnel,
+  - a meglévő kamerás script kimenete piros színnel,
+  - az objektumkeresés eredményét felhasználva az új script által generált koordináta rendszer kék színnel.
+
+A Loader mindig az adott polchely egy dedikált, névleges koordinátájánál áll meg, majd a kamerás feldolgozással korrigáljuk a beállás pontatlanságát. A pontatlanság adódik egyrészt a négy keréken guruló eszköz beállási pontosságától, másrészt a helyenként különböző tömegekkel terhelt polcrendszer lehajlásától és vetemedésétől.
 
 ## Tartalomjegyzék
 - [Telepítés](#telepítés)
 - [Használat](#használat)
 - [Scriptek](#scriptek)
-  - [1. Betanító script (`1-fiok_train.py`)](#1-betanító-script-trainpy)
+  - [1. Betanító script (`1-fiok_train.py`)]([#1-betanító-script-trainpy](https://github.com/mecalis/loader_yolo/blob/main/1-fiok_train.py))
   - [2. Tesztelő script (`2-fiok_teszt.py`)](#2-tesztelő-script-testpy)
   - [3. Eredménykiértékelő script (`3-fiok_csv_eredmenyek.py`)](#3-eredménykiértékelő-script-evaluate_resultspy)
   - [4. CSV feldolgozó script (`4-generate_text_file.py`)](#4-csv-feldolgozó-script-process_csvpy)
@@ -39,7 +45,7 @@ A .csv fájlban tárolt eredményeket feldolgozza. Minden betanítás után futt
 Az „érdekes” képeket külön mappába másolja további elemzéshez. 
 
 4. CSV feldolgozó script (4-generate_text_file.py)
-Létrehozza a results.csv fájlt az alábbi formátumban: fájlnév, x_tengely, y_tengely
+Létrehozza a results.csv fájlt az alábbi formátumban: fájlnév, x_tengely, y_tengely. Ezek az értékek lesznek az korrigációs eltolásvektorok a robot verélése számára.
 
 
 Működés:
