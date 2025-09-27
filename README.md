@@ -11,6 +11,8 @@
   - a kép közepét jelző koordináta rendszer zöld színnel,
   - a meglévő kamerás script kimenete piros színnel,
   - az objektumkeresés eredményét felhasználva az új script által generált koordináta rendszer kék színnel.
+
+Az alábbi képen egy erőteljes becsillanás miatti hibás képfeldolgozás eredménye látható (piros koordináta rendszer), míg a YOLO model által generált kék koordináta rendszer a megfelelő helyen van.
     ![Koordináta rendszerek](fiok_teszt/osszehasonlito_kepek/Frame_20250627_111958_244_LoaderFS1010FK_StorageHangerFaceplateStateDetect_Right.jpg)
 
 A Loader mindig az adott polchely egy dedikált, névleges koordinátájánál áll meg, majd a kamerás feldolgozással korrigáljuk a beállás pontatlanságát. A pontatlanság adódik egyrészt a négy keréken guruló eszköz beállási pontosságától, másrészt a helyenként különböző tömegekkel terhelt polcrendszer lehajlásától és vetemedésétől.
